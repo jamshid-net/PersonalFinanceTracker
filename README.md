@@ -1,15 +1,15 @@
-# ?? FiTrack � Shaxsiy Moliyaviy Hisobot Tizimi
+# 💸 FiTrack – Shaxsiy Moliyaviy Hisobot Tizimi
 
-**FiTrack** � bu .NET 9 asosida ishlab chiqilgan, foydalanuvchining daromad va xarajatlarini boshqarish, tahlil qilish, statistik hisobotlar olish, va audit yuritishni qo�llab-quvvatlaydigan moliyaviy kuzatuv tizimidir.
+**FiTrack** — bu .NET 9 asosida ishlab chiqilgan, foydalanuvchining daromad va xarajatlarini boshqarish, tahlil qilish, statistik hisobotlar olish, va audit yuritishni qo‘llab-quvvatlaydigan moliyaviy kuzatuv tizimidir.
 
 ---
 
-## ?? Texnologiyalar
+## 🧱 Texnologiyalar
 
-| Yo�nalish          | Texnologiya                  |
+| Yo‘nalish          | Texnologiya                  |
 | ------------------ | ----------------------------|
 | Backend            | ASP.NET Core 9               |
-| Ma�lumotlar bazasi | PostgreSQL 16                |
+| Ma’lumotlar bazasi | PostgreSQL 16                |
 | Kesh (Cache)       | Redis (localhost default)    |
 | Audit & Log        | Serilog + Telegram bot       |
 | Arxitektura        | Clean Architecture           |
@@ -19,11 +19,11 @@
 
 ---
 
-## ?? Muhim sozlamalar va Eslatmalar
+## ⚙️ Muhim sozlamalar va Eslatmalar
 
-### ?? Redis Cache sozlovi
+### 🔐 Redis Cache sozlovi
 
-`Program.cs` yoki `DependencyInjection.cs` faylida quyidagicha yozilgan bo�lishi kerak:
+`Program.cs` yoki `DependencyInjection.cs` faylida quyidagicha yozilgan bo‘lishi kerak:
 
 ```csharp
 builder.Services.AddStackExchangeRedisCache(options =>
@@ -33,11 +33,11 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 ```
 
-> Redis port va IP � `localhost:6379` by default. Redis server ishlayotganiga ishonch hosil qiling.
+> Redis port va IP – `localhost:6379` by default. Redis server ishlayotganiga ishonch hosil qiling.
 
 ---
 
-### ?? Migratsiya ishlari uchun maxsus sozlamalar
+### ⚠️ Migratsiya ishlari uchun maxsus sozlamalar
 
 #### `Add-Migration` yoki `Update-Database` bajarayotganda:
 
@@ -65,9 +65,9 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-### ?? `appsettings.json` sozlamalari
+### 📟  `appsettings.json` sozlamalari
 
-#### ?? Telegram loglar uchun konfiguratsiya
+#### 📡 Telegram loglar uchun konfiguratsiya
 
 ```json
 "TelegramConfigure": {
@@ -80,7 +80,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-#### ?? Ma�lumotlar bazasiga ulanish
+#### 🔗 Ma’lumotlar bazasiga ulanish
 
 ```json
 "ConnectionStrings": {
@@ -88,22 +88,22 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 }
 ```
 
-> PostgreSQL ulanish satri � sozlab qo�ying.
+> PostgreSQL ulanish satri — sozlab qo‘ying.
 
 ---
 
-## ? Umumiy imkoniyatlar
+## ✅ Umumiy imkoniyatlar
 
 * [x] Foydalanuvchi daromad/xarajatlarini CRUD qilish
 * [x] Har bir transactionga audit log yuritish
-* [x] Kategoriya bo�yicha sarf tahlili
+* [x] Kategoriya bo‘yicha sarf tahlili
 * [x] Oylik balans: umumiy daromad/xarajat va farq
-* [x] Soft delete (IsActive orqali yashirin o�chirish)
+* [x] Soft delete (IsActive orqali yashirin o‘chirish)
 * [x] Filtrlash, sortlash, pagination
 
 ---
 
-## ?? Ishga tushirish
+## 🚀 Ishga tushirish
 
 1. **PostgreSQL** va **Redis** ishga tushirilganiga ishonch hosil qiling.
 2. `dotnet ef database update` bilan bazani yarating.

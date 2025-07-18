@@ -147,17 +147,27 @@ public class FinanceTransactionService(ICurrentUser currentUser,
         var userId = currentUser.Id;
         var fromDate = DateTime.UtcNow.AddMonths(-months);
 
-        return await dbContext.FinTransactions
+
+        var result = await dbContext.FinTransactions
             .Where(t => t.UserId == userId && t.Created >= fromDate && t.IsActive)
             .GroupBy(t => new { t.Created.Year, t.Created.Month })
-            .Select(g => new MonthlyTrendResponseModel
+            .Select(g => new
             {
-                Month = $"{g.Key.Year}-{g.Key.Month:D2}",
+                g.Key.Year,
+                g.Key.Month,
                 TotalIncome = g.Where(x => x.Type == EnumTransactionType.Income).Sum(x => x.Amount),
                 TotalExpense = g.Where(x => x.Type == EnumTransactionType.Expense).Sum(x => x.Amount)
             })
-            .OrderBy(x => x.Month)
+            .OrderBy(x => x.Year).ThenBy(x => x.Month)
             .ToListAsync(ct);
+
+
+        return result.Select(x => new MonthlyTrendResponseModel
+        {
+            Month = $"{x.Year}-{x.Month:D2}",
+            TotalIncome = x.TotalIncome,
+            TotalExpense = x.TotalExpense
+        }).ToList();
     }
 
 }

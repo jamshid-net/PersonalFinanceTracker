@@ -4,7 +4,7 @@
 
 ---
 
-## ?? Texnologiyalar
+## 🧱 Texnologiyalar
 
 | Yo‘nalish          | Texnologiya                  |
 | ------------------ | ----------------------------|
@@ -19,9 +19,9 @@
 
 ---
 
-## ?? Muhim sozlamalar va Eslatmalar
+## ⚙️ Muhim sozlamalar va Eslatmalar
 
-### ?? Redis Cache sozlovi
+### 🔐 Redis Cache sozlovi
 
 `Program.cs` yoki `DependencyInjection.cs` faylida quyidagicha yozilgan bo‘lishi kerak:
 
@@ -37,7 +37,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 
 ---
 
-### ?? Migratsiya ishlari uchun maxsus sozlamalar
+### ⚠️ Migratsiya ishlari uchun maxsus sozlamalar
 
 #### `Add-Migration` yoki `Update-Database` bajarayotganda:
 
@@ -65,9 +65,9 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-### ?? `appsettings.json` sozlamalari
+### 📟  `appsettings.json` sozlamalari
 
-#### ?? Telegram loglar uchun konfiguratsiya
+#### 📡 Telegram loglar uchun konfiguratsiya
 
 ```json
 "TelegramConfigure": {
@@ -80,7 +80,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-#### ?? Ma’lumotlar bazasiga ulanish
+#### 🔗 Ma’lumotlar bazasiga ulanish
 
 ```json
 "ConnectionStrings": {
@@ -92,7 +92,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-## ? Umumiy imkoniyatlar
+## ✅ Umumiy imkoniyatlar
 
 * [x] Foydalanuvchi daromad/xarajatlarini CRUD qilish
 * [x] Har bir transactionga audit log yuritish
@@ -103,7 +103,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-## ?? Ishga tushirish
+## 🚀 Ishga tushirish
 
 1. **PostgreSQL** va **Redis** ishga tushirilganiga ishonch hosil qiling.
 2. `dotnet ef database update` bilan bazani yarating.

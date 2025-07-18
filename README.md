@@ -15,8 +15,6 @@
 | Arxitektura        | Clean Architecture           |
 | Auth               | JWT Authentication           |
 | API Hujjatlari     | Swagger (prod'da auth bilan) |
-| Docker             | Docker Compose               |
-
 ---
 
 ## ⚙️ Muhim sozlamalar va Eslatmalar

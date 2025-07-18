@@ -18,8 +18,8 @@ export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL');
 export interface IFin_transactionApiService {
     createTransaction(requestModel: FinanceTransactionRequestModel): Observable<ResponseDataOfFinanceTransactionResponseModel>;
     updateTransaction(requestModel: FinanceTransactionRequestModel): Observable<ResponseDataOfFinanceTransactionResponseModel>;
-    deleteTransaction(): Observable<ResponseDataOfBoolean>;
-    getTransactionById(): Observable<FinanceTransactionResponseModel>;
+    deleteTransaction(id: number): Observable<ResponseDataOfBoolean>;
+    getTransactionById(id: number): Observable<FinanceTransactionResponseModel>;
     getTransactions(request: FilterRequest): Observable<ResponseDataOfPageListOfFinanceMiniTransactionResponseModel>;
     getCurrentMonthSummary(): Observable<ResponseDataOfMonthlySummaryResponseModel>;
     getMonthlyTrends(months: number): Observable<ResponseDataOfListOfMonthlyTrendResponseModel>;
@@ -142,8 +142,12 @@ export class Fin_transactionApiService implements IFin_transactionApiService {
         return _observableOf(null as any);
     }
 
-    deleteTransaction(): Observable<ResponseDataOfBoolean> {
-        let url_ = this.baseUrl + "/api/web/FinTransaction/DeleteTransaction";
+    deleteTransaction(id: number): Observable<ResponseDataOfBoolean> {
+        let url_ = this.baseUrl + "/api/web/FinTransaction/DeleteTransaction?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "id=" + encodeURIComponent("" + id) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -190,8 +194,12 @@ export class Fin_transactionApiService implements IFin_transactionApiService {
         return _observableOf(null as any);
     }
 
-    getTransactionById(): Observable<FinanceTransactionResponseModel> {
-        let url_ = this.baseUrl + "/api/web/FinTransaction/GetTransactionById";
+    getTransactionById(id: number): Observable<FinanceTransactionResponseModel> {
+        let url_ = this.baseUrl + "/api/web/FinTransaction/GetTransactionById?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "id=" + encodeURIComponent("" + id) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -394,10 +402,10 @@ export class Fin_transactionApiService implements IFin_transactionApiService {
 export interface ICategoryApiService {
     createCategory(requestModel: CategoryRequestModel): Observable<ResponseDataOfCategoryResponseModel>;
     updateCategory(requestModel: CategoryRequestModel): Observable<ResponseDataOfCategoryResponseModel>;
-    deleteCategory(): Observable<ResponseDataOfBoolean>;
-    getCategoryById(): Observable<ResponseDataOfCategoryResponseModel>;
+    deleteCategory(id: number): Observable<ResponseDataOfBoolean>;
+    getCategoryById(id: number): Observable<ResponseDataOfCategoryResponseModel>;
     getCategories(filter: FilterRequest): Observable<ResponseDataOfPageListOfCategoryResponseModel>;
-    getTopExpenseCategories(): Observable<ResponseDataOfListOfTopCategoryExpenseResponseModel>;
+    getTopExpenseCategories(top: number): Observable<ResponseDataOfListOfTopCategoryExpenseResponseModel>;
 }
 
 @Injectable({
@@ -517,8 +525,12 @@ export class CategoryApiService implements ICategoryApiService {
         return _observableOf(null as any);
     }
 
-    deleteCategory(): Observable<ResponseDataOfBoolean> {
-        let url_ = this.baseUrl + "/api/web/Category/DeleteCategory";
+    deleteCategory(id: number): Observable<ResponseDataOfBoolean> {
+        let url_ = this.baseUrl + "/api/web/Category/DeleteCategory?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "id=" + encodeURIComponent("" + id) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -565,8 +577,12 @@ export class CategoryApiService implements ICategoryApiService {
         return _observableOf(null as any);
     }
 
-    getCategoryById(): Observable<ResponseDataOfCategoryResponseModel> {
-        let url_ = this.baseUrl + "/api/web/Category/GetCategoryById";
+    getCategoryById(id: number): Observable<ResponseDataOfCategoryResponseModel> {
+        let url_ = this.baseUrl + "/api/web/Category/GetCategoryById?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "id=" + encodeURIComponent("" + id) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -665,8 +681,12 @@ export class CategoryApiService implements ICategoryApiService {
         return _observableOf(null as any);
     }
 
-    getTopExpenseCategories(): Observable<ResponseDataOfListOfTopCategoryExpenseResponseModel> {
-        let url_ = this.baseUrl + "/api/web/Category/GetTopExpenseCategories";
+    getTopExpenseCategories(top: number): Observable<ResponseDataOfListOfTopCategoryExpenseResponseModel> {
+        let url_ = this.baseUrl + "/api/web/Category/GetTopExpenseCategories?";
+        if (top === undefined || top === null)
+            throw new Error("The parameter 'top' must be defined and cannot be null.");
+        else
+            url_ += "top=" + encodeURIComponent("" + top) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {

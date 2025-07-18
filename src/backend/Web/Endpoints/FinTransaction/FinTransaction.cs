@@ -38,7 +38,7 @@ public class FinTransaction : EndpointGroupBase
 
     public async Task<ResponseData<bool>> DeleteTransaction(
         IFinanceTransactionService service,
-        int id,
+        [FromQuery] int id,
         CancellationToken ct)
     {
         return await service.DeleteAsync(id, ct);
@@ -46,7 +46,7 @@ public class FinTransaction : EndpointGroupBase
 
     public async Task<FinanceTransactionResponseModel> GetTransactionById(
         IFinanceTransactionService service,
-        int id,
+        [FromQuery] int id,
         CancellationToken ct)
     {
         return await service.GetByIdAsync(id, ct);
@@ -70,7 +70,7 @@ public class FinTransaction : EndpointGroupBase
 
     public async Task<ResponseData<List<MonthlyTrendResponseModel>>> GetMonthlyTrends(
         IFinanceTransactionService service,
-        int months,
+        [FromQuery] int months,
         CancellationToken ct)
     {
         return await service.GetMonthlyTrendsAsync(months, ct);

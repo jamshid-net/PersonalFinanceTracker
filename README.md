@@ -1,15 +1,15 @@
-# ?? FiTrack – Shaxsiy Moliyaviy Hisobot Tizimi
+# ðŸ’¸ FiTrack â€“ Shaxsiy Moliyaviy Hisobot Tizimi
 
-**FiTrack** — bu .NET 9 asosida ishlab chiqilgan, foydalanuvchining daromad va xarajatlarini boshqarish, tahlil qilish, statistik hisobotlar olish, va audit yuritishni qo‘llab-quvvatlaydigan moliyaviy kuzatuv tizimidir.
+**FiTrack** â€” bu .NET 9 asosida ishlab chiqilgan, foydalanuvchining daromad va xarajatlarini boshqarish, tahlil qilish, statistik hisobotlar olish, va audit yuritishni qoâ€˜llab-quvvatlaydigan moliyaviy kuzatuv tizimidir.
 
 ---
 
 ## ?? Texnologiyalar
 
-| Yo‘nalish          | Texnologiya                  |
+| Yoâ€˜nalish          | Texnologiya                  |
 | ------------------ | ----------------------------|
 | Backend            | ASP.NET Core 9               |
-| Ma’lumotlar bazasi | PostgreSQL 16                |
+| Maâ€™lumotlar bazasi | PostgreSQL 16                |
 | Kesh (Cache)       | Redis (localhost default)    |
 | Audit & Log        | Serilog + Telegram bot       |
 | Arxitektura        | Clean Architecture           |
@@ -23,7 +23,7 @@
 
 ### ?? Redis Cache sozlovi
 
-`Program.cs` yoki `DependencyInjection.cs` faylida quyidagicha yozilgan bo‘lishi kerak:
+`Program.cs` yoki `DependencyInjection.cs` faylida quyidagicha yozilgan boâ€˜lishi kerak:
 
 ```csharp
 builder.Services.AddStackExchangeRedisCache(options =>
@@ -33,7 +33,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 ```
 
-> Redis port va IP – `localhost:6379` by default. Redis server ishlayotganiga ishonch hosil qiling.
+> Redis port va IP â€“ `localhost:6379` by default. Redis server ishlayotganiga ishonch hosil qiling.
 
 ---
 
@@ -80,7 +80,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 ---
 
-#### ?? Ma’lumotlar bazasiga ulanish
+#### ?? Maâ€™lumotlar bazasiga ulanish
 
 ```json
 "ConnectionStrings": {
@@ -88,7 +88,7 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 }
 ```
 
-> PostgreSQL ulanish satri — sozlab qo‘ying.
+> PostgreSQL ulanish satri â€” sozlab qoâ€˜ying.
 
 ---
 
@@ -96,9 +96,9 @@ builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
 
 * [x] Foydalanuvchi daromad/xarajatlarini CRUD qilish
 * [x] Har bir transactionga audit log yuritish
-* [x] Kategoriya bo‘yicha sarf tahlili
+* [x] Kategoriya boâ€˜yicha sarf tahlili
 * [x] Oylik balans: umumiy daromad/xarajat va farq
-* [x] Soft delete (IsActive orqali yashirin o‘chirish)
+* [x] Soft delete (IsActive orqali yashirin oâ€˜chirish)
 * [x] Filtrlash, sortlash, pagination
 
 ---

@@ -1,0 +1,1607 @@
+{
+  "x-generator": "NSwag v14.2.0.0 (NJsonSchema v11.1.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Web API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/web/FinTransaction/CreateTransaction": {
+      "post": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "CreateTransaction",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FinanceTransactionRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfFinanceTransactionResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/UpdateTransaction": {
+      "put": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "UpdateTransaction",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FinanceTransactionRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfFinanceTransactionResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/DeleteTransaction": {
+      "delete": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "DeleteTransaction",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfBoolean"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/GetTransactionById": {
+      "get": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "GetTransactionById",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FinanceTransactionResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/GetTransactions": {
+      "post": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "GetTransactions",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfPageListOfFinanceMiniTransactionResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/GetCurrentMonthSummary": {
+      "get": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "GetCurrentMonthSummary",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfMonthlySummaryResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/FinTransaction/GetMonthlyTrends": {
+      "get": {
+        "tags": [
+          "fin_transaction"
+        ],
+        "operationId": "GetMonthlyTrends",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfListOfMonthlyTrendResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/CreateCategory": {
+      "post": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "CreateCategory",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfCategoryResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/UpdateCategory": {
+      "put": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "UpdateCategory",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfCategoryResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/DeleteCategory": {
+      "delete": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "DeleteCategory",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfBoolean"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/GetCategoryById": {
+      "get": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "GetCategoryById",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfCategoryResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/GetCategories": {
+      "post": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "GetCategories",
+        "requestBody": {
+          "x-name": "filter",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfPageListOfCategoryResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/Category/GetTopExpenseCategories": {
+      "get": {
+        "tags": [
+          "category"
+        ],
+        "operationId": "GetTopExpenseCategories",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfListOfTopCategoryExpenseResponseModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/web/AuthUser/Login": {
+      "post": {
+        "tags": [
+          "auth_user"
+        ],
+        "operationId": "Login",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfTokenResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/AuthUser/RefreshToken": {
+      "put": {
+        "tags": [
+          "auth_user"
+        ],
+        "operationId": "RefreshToken",
+        "parameters": [
+          {
+            "name": "refreshToken",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfTokenResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/AuthUser/Logout": {
+      "delete": {
+        "tags": [
+          "auth_user"
+        ],
+        "operationId": "Logout",
+        "parameters": [
+          {
+            "name": "refreshToken",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/AuthUser/Register": {
+      "post": {
+        "tags": [
+          "auth_user"
+        ],
+        "operationId": "Register",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterUserRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfTokenResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/ManageUser/GetAllUsers": {
+      "post": {
+        "tags": [
+          "manage_user"
+        ],
+        "operationId": "GetAllUsers",
+        "requestBody": {
+          "x-name": "filterRequest",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfPageListOfUserResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/Roles/CreateRole": {
+      "post": {
+        "tags": [
+          "roles"
+        ],
+        "operationId": "CreateRole",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfRoleDetailsResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/Roles/UpdateRole": {
+      "put": {
+        "tags": [
+          "roles"
+        ],
+        "operationId": "UpdateRole",
+        "requestBody": {
+          "x-name": "requestModel",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfRoleDetailsResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/Roles/GetRoleDetails": {
+      "get": {
+        "tags": [
+          "roles"
+        ],
+        "operationId": "GetRoleDetails",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfRoleDetailsResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/web/Roles/GetRoles": {
+      "post": {
+        "tags": [
+          "roles"
+        ],
+        "operationId": "GetRoles",
+        "requestBody": {
+          "x-name": "filterRequest",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDataOfPageListOfRoleResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ResponseDataOfFinanceTransactionResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/FinanceTransactionResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "FinanceTransactionResponseModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditResponseModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "type": {
+                "$ref": "#/components/schemas/EnumTransactionType"
+              },
+              "amount": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "note": {
+                "type": "string",
+                "nullable": true
+              },
+              "categoryId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "category": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/CategoryResponseModel"
+                  }
+                ]
+              },
+              "userId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "EnumTransactionType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Income",
+          "Expense"
+        ],
+        "enum": [
+          1,
+          2
+        ]
+      },
+      "CategoryResponseModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditResponseModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "colour": {
+                "$ref": "#/components/schemas/Colour"
+              },
+              "userId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "Colour": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ValueObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "ValueObject": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false
+      },
+      "BaseAuditResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseError": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "FinanceTransactionRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/EnumTransactionType"
+          },
+          "amount": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ResponseDataOfBoolean": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "type": "boolean"
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "ResponseDataOfPageListOfFinanceMiniTransactionResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageListOfFinanceMiniTransactionResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "PageListOfFinanceMiniTransactionResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filteredTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FinanceMiniTransactionResponseModel"
+            }
+          }
+        }
+      },
+      "FinanceMiniTransactionResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "$ref": "#/components/schemas/EnumTransactionType"
+          },
+          "amount": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "categoryName": {
+            "type": "string"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "FilterRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterSort"
+            }
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterObject"
+            }
+          }
+        }
+      },
+      "FilterSort": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/FilterBaseOfZorroSortEnum"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "FilterBaseOfZorroSortEnum": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/ZorroSortEnum"
+          }
+        }
+      },
+      "ZorroSortEnum": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Asc",
+          "Desc"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "FilterObject": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/FilterBaseOfObject"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "FilterBaseOfObject": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "nullable": true
+          }
+        }
+      },
+      "ResponseDataOfMonthlySummaryResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MonthlySummaryResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "MonthlySummaryResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalIncome": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "totalExpense": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "balance": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "ResponseDataOfListOfMonthlyTrendResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/MonthlyTrendResponseModel"
+            }
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "MonthlyTrendResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "totalIncome": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "totalExpense": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "balance": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "ResponseDataOfCategoryResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CategoryResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "CategoryRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "colorCode": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseDataOfPageListOfCategoryResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageListOfCategoryResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "PageListOfCategoryResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filteredTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryResponseModel"
+            }
+          }
+        }
+      },
+      "ResponseDataOfListOfTopCategoryExpenseResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TopCategoryExpenseResponseModel"
+            }
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "TopCategoryExpenseResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "colour": {
+            "$ref": "#/components/schemas/Colour"
+          },
+          "categoryName": {
+            "type": "string"
+          },
+          "totalExpense": {
+            "type": "number",
+            "format": "decimal"
+          }
+        }
+      },
+      "ResponseDataOfTokenResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/TokenResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "TokenResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          },
+          "accessTokenExpiration": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "refreshTokenExpiration": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "LoginRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "userName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "deviceId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RegisterUserRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseDataOfPageListOfUserResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageListOfUserResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "PageListOfUserResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filteredTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserResponseModel"
+            }
+          }
+        }
+      },
+      "UserResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "lastLogin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "failedLoginAttempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ResponseDataOfRoleDetailsResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RoleDetailsResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "RoleDetailsResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RoleRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EnumPermission"
+            }
+          }
+        }
+      },
+      "EnumPermission": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "CreateRole",
+          "UpdateRole",
+          "DeleteRole",
+          "GetRole",
+          "CreateUser",
+          "UpdateUser",
+          "DeleteUser",
+          "GetUser"
+        ],
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "ResponseDataOfPageListOfRoleResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "result": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PageListOfRoleResponseModel"
+              }
+            ]
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ResponseError"
+              }
+            ]
+          }
+        }
+      },
+      "PageListOfRoleResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filteredTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleResponseModel"
+            }
+          }
+        }
+      },
+      "RoleResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}

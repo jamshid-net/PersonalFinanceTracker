@@ -38,7 +38,7 @@ public class Category : EndpointGroupBase
 
     public async Task<ResponseData<bool>> DeleteCategory(
         ICategoryService service,
-        [AsParameters] int id,
+        int id,
         CancellationToken ct)
     {
         return await service.DeleteAsync(id, ct);
@@ -46,7 +46,7 @@ public class Category : EndpointGroupBase
 
     public async Task<ResponseData<CategoryResponseModel>> GetCategoryById(
         ICategoryService service,
-        [AsParameters] int id,
+        int id,
         CancellationToken ct)
     {
         return await service.GetByIdAsync(id, ct);
@@ -61,7 +61,7 @@ public class Category : EndpointGroupBase
     } 
     public async Task<ResponseData<List<TopCategoryExpenseResponseModel>>> GetTopExpenseCategories(
         ICategoryService service,
-        [AsParameters] int top,
+        int top,
         CancellationToken ct)
     {
         return await service.GetTopExpenseCategoriesAsync(top, ct);

@@ -22,7 +22,7 @@ export interface IFin_transactionApiService {
     getTransactionById(): Observable<FinanceTransactionResponseModel>;
     getTransactions(request: FilterRequest): Observable<ResponseDataOfPageListOfFinanceMiniTransactionResponseModel>;
     getCurrentMonthSummary(): Observable<ResponseDataOfMonthlySummaryResponseModel>;
-    getMonthlyTrends(): Observable<ResponseDataOfListOfMonthlyTrendResponseModel>;
+    getMonthlyTrends(months: number): Observable<ResponseDataOfListOfMonthlyTrendResponseModel>;
 }
 
 @Injectable({
@@ -338,8 +338,12 @@ export class Fin_transactionApiService implements IFin_transactionApiService {
         return _observableOf(null as any);
     }
 
-    getMonthlyTrends(): Observable<ResponseDataOfListOfMonthlyTrendResponseModel> {
-        let url_ = this.baseUrl + "/api/web/FinTransaction/GetMonthlyTrends";
+    getMonthlyTrends(months: number): Observable<ResponseDataOfListOfMonthlyTrendResponseModel> {
+        let url_ = this.baseUrl + "/api/web/FinTransaction/GetMonthlyTrends?";
+        if (months === undefined || months === null)
+            throw new Error("The parameter 'months' must be defined and cannot be null.");
+        else
+            url_ += "months=" + encodeURIComponent("" + months) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {

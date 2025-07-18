@@ -198,6 +198,18 @@
           "fin_transaction"
         ],
         "operationId": "GetMonthlyTrends",
+        "parameters": [
+          {
+            "name": "months",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
         "responses": {
           "200": {
             "description": "",

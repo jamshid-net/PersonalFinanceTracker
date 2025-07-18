@@ -9,6 +9,7 @@ using FiTrack.Domain.Enums;
 namespace FiTrack.Application.Services.Transaction;
 public class FinanceTransactionService(ICurrentUser currentUser,
                                        IApplicationDbContext dbContext,
+                                       TimeProvider dateTime,
                                        IMapper mapper) : IFinanceTransactionService
 {
     public async Task<FinanceTransactionResponseModel> CreateAsync(FinanceTransactionRequestModel requestModel, CancellationToken cancellationToken = default)
@@ -120,8 +121,8 @@ public class FinanceTransactionService(ICurrentUser currentUser,
         if (userId == 0)
             throw new UnauthorizedAccessException();
 
-        var now = DateTime.UtcNow;
-        var firstDay = new DateTime(now.Year, now.Month, 1);
+        var now = dateTime.GetUtcNow();
+        var firstDay = new DateTimeOffset(new DateTime(now.Year, now.Month, 1), TimeSpan.Zero);
 
         var query = dbContext.FinTransactions
             .Where(t => t.UserId == userId &&

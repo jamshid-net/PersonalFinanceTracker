@@ -1413,6 +1413,7 @@ export enum EnumTransactionType {
 }
 
 export class CategoryResponseModel extends BaseAuditResponseModel implements ICategoryResponseModel {
+    id?: number;
     name?: string;
     colour?: Colour;
     userId?: number;
@@ -1424,6 +1425,7 @@ export class CategoryResponseModel extends BaseAuditResponseModel implements ICa
     override init(_data?: any) {
         super.init(_data);
         if (_data) {
+            this.id = _data["id"];
             this.name = _data["name"];
             this.colour = _data["colour"] ? Colour.fromJS(_data["colour"]) : <any>undefined;
             this.userId = _data["userId"];
@@ -1439,6 +1441,7 @@ export class CategoryResponseModel extends BaseAuditResponseModel implements ICa
 
     override toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
         data["name"] = this.name;
         data["colour"] = this.colour ? this.colour.toJSON() : <any>undefined;
         data["userId"] = this.userId;
@@ -1448,6 +1451,7 @@ export class CategoryResponseModel extends BaseAuditResponseModel implements ICa
 }
 
 export interface ICategoryResponseModel extends IBaseAuditResponseModel {
+    id?: number;
     name?: string;
     colour?: Colour;
     userId?: number;

@@ -1,4 +1,4 @@
-# 💸 FiTrack – Shaxsiy Moliyaviy Hisobot Tizimi
+# 💸 Personal Finance Tracker – Shaxsiy Moliyaviy Hisobot Tizimi
 
 **FiTrack** — bu .NET 9 asosida ishlab chiqilgan, foydalanuvchining daromad va xarajatlarini boshqarish, tahlil qilish, statistik hisobotlar olish, va audit yuritishni qo‘llab-quvvatlaydigan moliyaviy kuzatuv tizimidir.
 
